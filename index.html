@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasad Swain - AI/ML Engineer & Web Developer. Building intelligent systems with Machine Learning and crafting elegant web experiences.">
+    <meta name="keywords" content="AI Engineer, ML Developer, Web Developer, Python, TensorFlow, React, Portfolio">
+    <meta name="author" content="Prasad Swain">
+    
+    <title>Prasad Swain - AI/ML Engineer & Web Developer</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ========================================
+         NAVIGATION BAR
+         Sticky navigation with mobile responsive menu
+    ========================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <div class="nav-brand">
+                <a href="#home" class="brand-link">
+                    <span class="brand-name">Prasad</span>
+                    <span class="brand-accent">Swain</span>
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="tech-insights.html" class="nav-link">Tech Insights</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO SECTION
+         Main landing section with animated background
+    ========================================= -->
+    <section class="hero" id="home">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container hero-container">
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <p class="hero-greeting fade-in-up">👋 Hi, I'm</p>
+                <h1 class="hero-title fade-in-up">
+                    Prasad <span class="gradient-text">Swain</span>
+                </h1>
+                <h2 class="hero-subtitle fade-in-up">
+                    AI/ML Engineer <span class="subtitle-divider">•</span> Web Developer <span class="subtitle-divider">•</span> Tech Innovator
+                </h2>
+                <p class="hero-description fade-in-up">
+                    Building intelligent systems with Machine Learning and crafting elegant web experiences. 
+                    CSE student passionate about Computer Vision, Deep Learning, and Modern Web Technologies.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta fade-in-up">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="hero-social fade-in-up">
+                    <a href="https://github.com/prasadswain" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/prasadswain" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:prasad456434@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                            <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+
+<!-- New code Added -->
+
+
+
+
+        <!-- Code Window -->
+        <!-- <div class="code-window">
+            <div class="code-header">
+                <span class="code-dot dot-red"></span>
+                <span class="code-dot dot-yellow"></span>
+                <span class="code-dot dot-green"></span>
+                <span class="code-title">ai_engineer.py</span>
+            </div>
+
+            <div class="code-body">
+                <!-- KEEP YOUR EXISTING <pre><code> CONTENT HERE -->
+            <!-- </div>
+        </div>
+
+    </div>
+</div> --> -->
+
+
+
+
+            <!-- Hero Visual - Code Window -->
+            <div class="hero-visual fade-in">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot dot-red"></span>
+                        <span class="code-dot dot-yellow"></span>
+                        <span class="code-dot dot-green"></span>
+                        <span class="code-title">ai_engineer.py</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="code-keyword">import</span> <span class="code-module">tensorflow</span> <span class="code-keyword">as</span> tf
+<span class="code-keyword">from</span> <span class="code-module">sklearn</span> <span class="code-keyword">import</span> model_selection
+
+<span class="code-keyword">class</span> <span class="code-class">AIEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-string">"Prasad Swain"</span>
+        <span class="code-param">self</span>.skills = [<span class="code-string">"ML"</span>, <span class="code-string">"AI"</span>, <span class="code-string">"Web Dev"</span>]
+        
+    <span class="code-keyword">def</span> <span class="code-function">build_future</span>(<span class="code-param">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Innovation"</span> 🚀</code></pre>
+                    </div>
+
+            
+
+                    
+<!-- End of new added code -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ABOUT SECTION
+         Personal story, education, and specialties
+    ========================================= -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    More than just code — here's my story and what drives me
+                </p>
+            </div>
+
+            <div class="about-content">
+                <!-- Profile Card -->
+                <div class="about-visual">
+                    <div class="profile-card glass-card">
+                        <div class="profile-image">
+                            <!-- <div class="profile-placeholder">
+                            </div> -->
+                            <img src="assets/images/1000022776 - Copy.jpg" alt="Prasad Swain" onerror="this.style.display='none'" style="z-index: 1000; border-radius: 10px;">
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Internships</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">7.5</span>
+                                <span class="stat-label">CGPA</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2027</span>
+                                <span class="stat-label">Graduation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Text Content -->
+                <div class="about-text">
+                    <div class="about-story">
+                        <h3 class="story-title">Building Tomorrow's Intelligence, Today</h3>
+                        <p>
+                            I'm a Computer Science Engineering student at <strong>NIST University, Berhampur</strong>, 
+                            pursuing my B.Tech (2023-2027) with a passion for creating intelligent systems that solve 
+                            real-world problems.
+                        </p>
+                        <p>
+                            My journey into AI and web development started with curiosity about how machines can learn 
+                            and how elegant interfaces can transform user experiences. Today, I combine both worlds — 
+                            building machine learning models that think and web applications that delight.
+                        </p>
+                        <p>
+                            As a <strong>Google Campus Ambassador</strong> and active member of the tech community, 
+                            I believe in learning by building, teaching by sharing, and growing through collaboration. 
+                            Whether it's training a neural network for face detection or crafting pixel-perfect responsive 
+                            interfaces, I approach every project with the same philosophy: <em>make it work, make it right, 
+                            make it matter</em>.
+                        </p>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="education-card glass-card">
+                        <div class="education-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="education-content">
+                            <h4 class="education-degree">B.Tech in Computer Science & Engineering</h4>
+                            <p class="education-university">NIST University, Berhampur</p>
+                            <div class="education-details">
+                                <span class="education-duration">2023 - 2027</span>
+                                <span class="education-divider">•</span>
+                                <span class="education-cgpa">CGPA: 7.5</span>
+                                <span class="education-divider">•</span>
+                                <span class="education-location">Berhampur, Odisha</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialties -->
+                    <div class="specialties">
+                        <h4 class="specialties-title">What I Do Best</h4>
+                        <div class="specialties-grid">
+                            <div class="specialty-item">
+                                <div class="specialty-icon">🤖</div>
+                                <div class="specialty-text">
+                                    <h5>Machine Learning</h5>
+                                    <p>Building models that learn from data and make intelligent predictions</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">👁️</div>
+                                <div class="specialty-text">
+                                    <h5>Computer Vision</h5>
+                                    <p>Teaching machines to see and understand visual information</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">🌐</div>
+                                <div class="specialty-text">
+                                    <h5>Web Development</h5>
+                                    <p>Creating responsive, performant web applications with modern tech</p>
+                                </div>
+                            </div>
+                            <div class="specialty-item">
+                                <div class="specialty-icon">🎨</div>
+                                <div class="specialty-text">
+                                    <h5>UI/UX Design</h5>
+                                    <p>Crafting intuitive user experiences with attention to detail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         EXPERIENCE SECTION
+         Professional timeline - DO NOT CHANGE CONTENT
+    ========================================= -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Career Journey</span>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-description">
+                    Building expertise through real-world impact and leadership
+                </p>
+            </div>
+
+            <div class="timeline">
+                
+                <!-- Google Campus Ambassador -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="experience-role">Google Campus Ambassador</h3>
+                                <span class="experience-company">Google</span>
+                            </div>
+                            <span class="experience-duration">Oct 2025 - Present</span>
+                            <span class="experience-badge badge-current">Current</span>
+                        </div>
+                        <p class="experience-description">
+                            Selected as an official Google Campus Ambassador to bridge technology and community at NIST University. 
+                            Leading tech evangelism initiatives, organizing workshops on Google technologies, and fostering a 
+                            culture of innovation and learning among students.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Organize technical workshops and hackathons for 500+ students</li>
+                            <li>Evangelize Google Cloud, Firebase, and Android development platforms</li>
+                            <li>Build and mentor student developer community focused on practical skills</li>
+                            <li>Collaborate with faculty and industry experts for tech events</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag">Leadership</span>
+                            <span class="tag">Community Building</span>
+                            <span class="tag">Tech Evangelism</span>
+                            <span class="tag">Public Speaking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Metabriq Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="experience-role">Web Development Intern</h3>
+                                <span class="experience-company">Metabriq</span>
+                            </div>
+                            <span class="experience-duration">2 Months</span>
+                        </div>
+                        <p class="experience-description">
+                            Developed and optimized responsive web applications for enterprise clients, focusing on performance, 
+                            cross-browser compatibility, and modern JavaScript frameworks. Collaborated with design and backend 
+                            teams to deliver pixel-perfect user interfaces.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Built responsive web applications using React, HTML5, CSS3, and JavaScript ES6+</li>
+                            <li>Integrated RESTful APIs for dynamic content rendering and real-time data updates</li>
+                            <li>Improved page load performance by 40% through code optimization and lazy loading</li>
+                            <li>Ensured cross-browser compatibility across Chrome, Firefox, Safari, and Edge</li>
+                            <li>Implemented modern UI patterns including infinite scroll and skeleton loaders</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Responsive Design</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTTC Internship -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="experience-role">Machine Learning Intern</h3>
+                                <span class="experience-company">CTTC, Bhubaneswar</span>
+                            </div>
+                            <span class="experience-duration">1 Month (Summer)</span>
+                        </div>
+                        <p class="experience-description">
+                            Gained hands-on experience in developing and training machine learning models on real-world datasets. 
+                            Worked on data preprocessing, feature engineering, model evaluation, and deployment pipelines for 
+                            classification and prediction tasks.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Developed ML classification models achieving 85%+ accuracy on test datasets</li>
+                            <li>Performed data preprocessing: cleaning, normalization, and feature extraction</li>
+                            <li>Implemented algorithms using TensorFlow, Keras, and Scikit-learn libraries</li>
+                            <li>Analyzed and visualized dataset patterns using Pandas, NumPy, and Matplotlib</li>
+                            <li>Collaborated on real-world AI/ML problem-solving with industry mentors</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Model Training</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NRC Social Media Handler -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="experience-header">
+                            <div class="experience-title-group">
+                                <h3 class="experience-role">Social Media Handler</h3>
+                                <span class="experience-company">NRC, NIST University</span>
+                            </div>
+                            <span class="experience-duration">March 2025 - Present</span>
+                            <span class="experience-badge badge-current">Current</span>
+                        </div>
+                        <p class="experience-description">
+                            Managing digital presence and content strategy for the NIST Robotics Club (NRC). Created engaging 
+                            content for major robotics events including Robo War and Robo Race, significantly increasing 
+                            student engagement and event participation.
+                        </p>
+                        <ul class="experience-highlights">
+                            <li>Increased social media engagement by 60% through strategic content planning</li>
+                            <li>Created promotional graphics, videos, and copy for robotics competitions</li>
+                            <li>Managed Instagram, Facebook, and LinkedIn presence for 1000+ followers</li>
+                            <li>Coordinated with event teams for real-time updates and live coverage</li>
+                        </ul>
+                        <div class="experience-tags">
+                            <span class="tag">Content Strategy</span>
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Graphic Design</span>
+                            <span class="tag">Community Management</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROJECTS SECTION
+         Case study project cards with image support
+    ========================================= -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I've Built</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Real-world applications solving meaningful problems with AI and web technologies
+                </p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project 1: Face Detection -->
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="assets\images\face-detection.png" alt="Face Detection System" onerror="this.style.display='none'">
+                        <div class="project-overlay">
+                            <span class="project-status status-completed">✓ Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke-width="2"/>
+                                <circle cx="9" cy="7" r="4" stroke-width="2"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-width="2"/>
+                            </svg>
+                        </div>
+
+                        <h3 class="project-title">Real-Time Face Detection System</h3>
+                        
+                        <div class="project-meta">
+                            <span class="project-category">Computer Vision</span>
+                            <span class="project-divider">•</span>
+                            <span class="project-year">2025</span>
+                        </div>
+
+                        <div class="project-problem">
+                            <h4>Problem</h4>
+                            <p>
+                                Traditional security systems lack real-time facial recognition capabilities, making 
+                                identity verification slow and inefficient in high-traffic environments.
+                            </p>
+                        </div>
+
+                        <div class="project-solution">
+                            <h4>Solution</h4>
+                            <p>
+                                Developed an intelligent face detection system using Convolutional Neural Networks (CNN) 
+                                that processes live video streams in real-time with high precision.
+                            </p>
+                        </div>
+
+                        <div class="project-learning">
+                            <h4>Key Learnings</h4>
+                            <p>
+                                Mastered OpenCV for real-time video processing, implemented CNN architecture with Keras, 
+                                and learned optimization techniques for deploying ML models in production.
+                            </p>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn-link btn-primary-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke-width="2"/>
+                                </svg>
+                                View Code
+                            </a>
+                            <a href="#" class="btn-link btn-secondary-link">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke-width="2"/>
+                                    <polyline points="15 3 21 3 21 9" stroke-width="2"/>
+                                    <line x1="10" y1="14" x2="21" y2="3" stroke-width="2"/>
+                                </svg>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI Portfolio Optimization -->
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="assets\images\Ai_portfolio_optimization.png"" alt="AI Portfolio Optimization" onerror="this.style.display='none'">
+                        <div class="project-overlay">
+                            <span class="project-status status-upcoming">⚡ In Development</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <line x1="12" y1="1" x2="12" y2="23" stroke-width="2"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-width="2"/>
+                            </svg>
+                        </div>
+
+                        <h3 class="project-title">AI-Powered Portfolio Optimization</h3>
+                        
+                        <div class="project-meta">
+                            <span class="project-category">Machine Learning</span>
+                            <span class="project-divider">•</span>
+                            <span class="project-year">2026</span>
+                        </div>
+
+                        <div class="project-problem">
+                            <h4>Problem</h4>
+                            <p>
+                                Manual portfolio allocation is time-consuming and often fails to account for complex market 
+                                patterns and risk-reward optimization across multiple asset classes.
+                            </p>
+                        </div>
+
+                        <div class="project-solution">
+                            <h4>Solution</h4>
+                            <p>
+                                Building an AI-driven optimization system that analyzes historical market data and technical 
+                                indicators to suggest optimal asset allocation strategies.
+                            </p>
+                        </div>
+
+                        <div class="project-learning">
+                            <h4>Key Learnings</h4>
+                            <p>
+                                Exploring modern portfolio theory, learning PyPortfolioOpt for optimization algorithms, 
+                                and implementing interactive data visualizations with Plotly.
+                            </p>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">PyPortfolioOpt</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Streamlit</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn-link btn-disabled">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" stroke-width="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="2"/>
+                                </svg>
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Disease Prediction -->
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="assets\images\deasies-prediction-system.png" alt="Disease Prediction System" onerror="this.style.display='none'">
+                        <div class="project-overlay">
+                            <span class="project-status status-upcoming">⚡ In Development</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <div class="project-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke-width="2"/>
+                            </svg>
+                        </div>
+
+                        <h3 class="project-title">AI Disease Prediction System</h3>
+                        
+                        <div class="project-meta">
+                            <span class="project-category">Healthcare AI</span>
+                            <span class="project-divider">•</span>
+                            <span class="project-year">2026</span>
+                        </div>
+
+                        <div class="project-problem">
+                            <h4>Problem</h4>
+                            <p>
+                                Early disease detection often requires expensive tests. Many patients lack access to 
+                                immediate health risk assessment tools based on symptoms and lifestyle data.
+                            </p>
+                        </div>
+
+                        <div class="project-solution">
+                            <h4>Solution</h4>
+                            <p>
+                                Developing a machine learning system that predicts disease likelihood based on health metrics, 
+                                lifestyle factors, and symptom data for early risk assessment.
+                            </p>
+                        </div>
+
+                        <div class="project-learning">
+                            <h4>Key Learnings</h4>
+                            <p>
+                                Learning medical dataset handling, feature engineering for health data, and building 
+                                classification models. Understanding healthcare AI ethics and privacy concerns.
+                            </p>
+                        </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="btn-link btn-disabled">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" stroke-width="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke-width="2"/>
+                                </svg>
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SKILLS SECTION
+         Technology icons with capability descriptions
+    ========================================= -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Technical Arsenal</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">
+                    Tools and technologies I use to build intelligent and elegant solutions
+                </p>
+            </div>
+
+            <div class="skills-categories">
+
+                <!-- AI & ML Skills -->
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="6" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="2" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">AI & Machine Learning</h3>
+                    </div>
+                    <p class="category-description">
+                        Building intelligent systems that learn, predict, and solve complex problems
+                    </p>
+                    
+                    <!-- Tech Stack Grid with Icons -->
+                    <div class="tech-stack-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#3776AB"/>
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="#FFD43B"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">Python</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M12 2l7.5 4.5v9L12 20l-7.5-4.5v-9L12 2z" fill="#FF6F00"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">TensorFlow</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" fill="#D00000"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">Keras</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" fill="#5FC1E8"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">OpenCV</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" fill="#013243"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">NumPy</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" fill="#150458"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">Pandas</span>
+                        </div>
+                    </div>
+
+                    <div class="category-badge">
+                        <span>What I Solve</span>
+                    </div>
+                    <ul class="capability-list">
+                        <li>Real-time face detection and recognition</li>
+                        <li>Classification and prediction models</li>
+                        <li>Data preprocessing and feature engineering</li>
+                        <li>Model optimization and deployment</li>
+                    </ul>
+                </div>
+
+                <!-- Frontend Skills -->
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21" stroke-width="2"/>
+                                <line x1="12" y1="17" x2="12" y2="21" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">Frontend Development</h3>
+                    </div>
+                    <p class="category-description">
+                        Crafting responsive, performant, and delightful user interfaces
+                    </p>
+                    
+                    <!-- Tech Stack Grid -->
+                    <div class="tech-stack-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M2 2h20l-2 18-8 2-8-2L2 2z" fill="#E34F26"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M2 2h20l-2 18-8 2-8-2L2 2z" fill="#1572B6"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" fill="#F7DF1E"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">JavaScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" fill="#61DAFB"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">React</span>
+                        </div>
+                    </div>
+
+                    <div class="category-badge">
+                        <span>What I Build</span>
+                    </div>
+                    <ul class="capability-list">
+                        <li>Fully responsive web applications</li>
+                        <li>Cross-browser compatible interfaces</li>
+                        <li>Performance-optimized pages</li>
+                        <li>API integration and dynamic content</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category glass-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="category-title">Tools & Platforms</h3>
+                    </div>
+                    <p class="category-description">
+                        Professional toolchain for efficient development and collaboration
+                    </p>
+                    
+                    <!-- Tech Stack Grid -->
+                    <div class="tech-stack-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M12 2l10 6v6c0 5.5-3.8 10.7-10 12-6.2-1.3-10-6.5-10-12V8l10-6z" fill="#F05032"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">Git</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.2 6.8 9.5.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.8.8.1-.6.3-1.1.6-1.3-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.5 0 0 .8-.3 2.7 1 .8-.2 1.7-.3 2.5-.3s1.7.1 2.5.3c1.9-1.3 2.7-1 2.7-1 .5 1.3.2 2.3.1 2.5.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5 4-1.3 6.8-5.1 6.8-9.5 0-5.5-4.5-10-10-10z" fill="#181717"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">GitHub</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" fill="#FF9900"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">AWS</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="8" fill="#F24E1E"/>
+                                    <circle cx="14" cy="10" r="3" fill="#FF7262"/>
+                                    <circle cx="10" cy="14" r="3" fill="#A259FF"/>
+                                </svg>
+                            </div>
+                            <span class="tech-name">Figma</span>
+                        </div>
+                    </div>
+
+                    <div class="category-badge">
+                        <span>What I Work With</span>
+                    </div>
+                    <ul class="capability-list">
+                        <li>Git-based workflow and CI/CD pipelines</li>
+                        <li>Cloud hosting and serverless architecture</li>
+                        <li>Design-to-code handoff and collaboration</li>
+                        <li>Agile development methodologies</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT SECTION - REDESIGNED
+         Clean, balanced, professional layout
+    ========================================= -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Open to opportunities, collaborations, and interesting conversations about tech
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+                
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="contact-intro glass-card">
+                        <h3>Let's Work Together</h3>
+                        <p>
+                            Whether it's a project collaboration, internship opportunity, hackathon team-up, 
+                            or just a conversation about technology — I'd love to hear from you!
+                        </p>
+                    </div>
+
+                    <div class="contact-methods">
+                        <a href="mailto:prasad456434@gmail.com" class="contact-method glass-card">
+                            <div class="method-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                                    <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4>Email</h4>
+                                <p>prasad456434@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a href="tel:+918260521733" class="contact-method glass-card">
+                            <div class="method-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4>Phone</h4>
+                                <p>+91 8260521733</p>
+                            </div>
+                        </a>
+
+                        <div class="contact-method glass-card">
+                            <div class="method-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke-width="2"/>
+                                    <circle cx="12" cy="10" r="3" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <div class="method-content">
+                                <h4>Location</h4>
+                                <p>Berhampur, Odisha, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA with Social Links -->
+                <div class="contact-cta-section">
+                    <div class="contact-cta-card glass-card">
+                        <h3>Ready to Start?</h3>
+                        <p>
+                            Let's discuss how we can work together to build something amazing. 
+                            I'm always excited to collaborate on innovative projects.
+                        </p>
+                        
+                        <div class="cta-buttons">
+                            <a href="mailto:prasad456434@gmail.com?subject=Let's%20Collaborate" class="btn btn-primary">
+                                <span>Send Message</span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="contact-social">
+                            <p class="social-label">Connect on social</p>
+                            <div class="social-links">
+                                <a href="https://github.com/prasadswain" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/prasadswain" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                                <a href="mailto:prasad456434@gmail.com" class="social-link" aria-label="Email">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                                        <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER
+         Copyright and quick links
+    ========================================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3 class="footer-name">Prasad Swain</h3>
+                    <p class="footer-tagline">AI/ML Engineer • Web Developer • Tech Innovator</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/prasadswain" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/prasadswain" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:prasad456434@gmail.com" class="footer-social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke-width="2"/>
+                            <polyline points="22,6 12,13 2,6" stroke-width="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Content</h4>
+                    <ul class="footer-list">
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="tech-insights.html">Tech Insights</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-list">
+                        <li><a href="mailto:prasad456434@gmail.com">Email</a></li>
+                        <li><a href="https://linkedin.com/in/prasadswain" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/prasadswain" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2026 Prasad Swain. Designed & Built with passion for excellence.
+                </p>
+                <p class="footer-tech">
+                    Made with HTML, CSS, JavaScript • No frameworks, just clean code
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
