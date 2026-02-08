@@ -25,7 +25,7 @@ const navLinks = document.querySelectorAll('.nav-link');
 function toggleMobileMenu() {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    
+
     // Prevent body scroll when menu is open
     if (navMenu.classList.contains('active')) {
         document.body.style.overflow = 'hidden';
@@ -114,11 +114,11 @@ function updateActiveNavLink() {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
             // Remove active class from all links
             navLinks.forEach(link => link.classList.remove('active'));
-            
+
             // Add active class to current section link
             const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
             if (activeLink) {
@@ -144,18 +144,18 @@ window.addEventListener('scroll', () => {
  */
 function smoothScrollToSection(e) {
     const href = e.currentTarget.getAttribute('href');
-    
+
     // Only handle internal anchor links
     if (href && href.startsWith('#')) {
         e.preventDefault();
-        
+
         const targetId = href.substring(1);
         const targetSection = document.getElementById(targetId);
-        
+
         if (targetSection) {
             const navbarHeight = navbar.offsetHeight;
             const targetPosition = targetSection.offsetTop - navbarHeight;
-            
+
             window.scrollTo({
                 top: targetPosition,
                 behavior: 'smooth'
@@ -171,7 +171,7 @@ navLinks.forEach(link => {
 
 // Smooth scroll for all internal anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href !== '#' && href.length > 1) {
             const target = document.querySelector(href);
@@ -179,7 +179,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 e.preventDefault();
                 const navbarHeight = navbar ? navbar.offsetHeight : 80;
                 const targetPosition = target.offsetTop - navbarHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -255,13 +255,13 @@ function handleCardTilt(e) {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
+
     const rotateX = (y - centerY) / 20;
     const rotateY = (centerX - x) / 20;
-    
+
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
 }
 
@@ -285,11 +285,11 @@ function resetCardTilt(e) {
  */
 function animateGradientOrbs() {
     const orbs = document.querySelectorAll('.gradient-orb');
-    
+
     orbs.forEach((orb, index) => {
         const speed = 20 + (index * 5); // Different speeds for each orb
         const delay = index * 5; // Stagger animation start
-        
+
         orb.style.animationDuration = `${speed}s`;
         orb.style.animationDelay = `${delay}s`;
     });
@@ -309,16 +309,16 @@ document.addEventListener('DOMContentLoaded', animateGradientOrbs);
  */
 function initTypingEffect() {
     const typingElement = document.querySelector('.hero-subtitle');
-    
+
     if (!typingElement) return;
-    
+
     const originalText = typingElement.textContent;
     typingElement.textContent = '';
     typingElement.style.opacity = '1';
-    
+
     let charIndex = 0;
     const typingSpeed = 50; // ms per character
-    
+
     function typeCharacter() {
         if (charIndex < originalText.length) {
             typingElement.textContent += originalText.charAt(charIndex);
@@ -326,7 +326,7 @@ function initTypingEffect() {
             setTimeout(typeCharacter, typingSpeed);
         }
     }
-    
+
     // Start typing after page load
     setTimeout(typeCharacter, 1000);
 }
@@ -341,38 +341,299 @@ function initTypingEffect() {
 
 /**
  * Animate code appearing in code window
- * Creates terminal-like typing effect
+ * Creates terminal-like typing effect with syntax highlighting
  */
-function animateCodeWindow() {
-    const codeBody = document.querySelector('.code-body code');
-    
-    if (!codeBody) return;
-    
-    const codeLines = codeBody.innerHTML.split('\n');
-    codeBody.innerHTML = '';
-    
+function initHeroCodeAnimation() {
+    const codeDisplay = document.getElementById('hero-code-display');
+    if (!codeDisplay) return;
+
+    // Code content with syntax highlighting classes
+    const codeData = [
+        [
+            { text: "import", class: "code-keyword" },
+            { text: " tensorflow", class: "code-module" },
+            { text: " as", class: "code-keyword" },
+            { text: " tf", class: "" }
+        ],
+        [
+            { text: "from", class: "code-keyword" },
+            { text: " sklearn", class: "code-module" },
+            { text: " import", class: "code-keyword" },
+            { text: " model_selection", class: "" }
+        ],
+        [], // Empty line
+        [
+            { text: "class", class: "code-keyword" },
+            { text: " AIEngineer", class: "code-class" },
+            { text: ":", class: "" }
+        ],
+        [
+            { text: "    def", class: "code-keyword" },
+            { text: " __init__", class: "code-function" },
+            { text: "(", class: "" },
+            { text: "self", class: "code-param" },
+            { text: "):", class: "" }
+        ],
+        [
+            { text: "        self", class: "code-param" },
+            { text: ".", class: "" },
+            { text: "name", class: "" },
+            { text: " = ", class: "" },
+            { text: "\"Prasad Swain\"", class: "code-string" }
+        ],
+        [
+            { text: "        self", class: "code-param" },
+            { text: ".", class: "" },
+            { text: "skills", class: "" },
+            { text: " = [", class: "" },
+            { text: "\"ML\"", class: "code-string" },
+            { text: ", ", class: "" },
+            { text: "\"AI\"", class: "code-string" },
+            { text: ", ", class: "" },
+            { text: "\"Web Dev\"", class: "code-string" },
+            { text: "]", class: "" }
+        ],
+        [], // Empty line
+        [
+            { text: "    def", class: "code-keyword" },
+            { text: " build_future", class: "code-function" },
+            { text: "(", class: "" },
+            { text: "self", class: "code-param" },
+            { text: "):", class: "" }
+        ],
+        [
+            { text: "        return", class: "code-keyword" },
+            { text: " \"Innovation\"", class: "code-string" },
+            { text: " 🚀", class: "" }
+        ]
+    ];
+
     let lineIndex = 0;
-    const lineDelay = 300; // ms between lines
-    
-    function showNextLine() {
-        if (lineIndex < codeLines.length) {
-            const line = document.createElement('div');
-            line.innerHTML = codeLines[lineIndex];
-            line.style.opacity = '0';
-            line.style.animation = 'fadeIn 0.3s forwards';
-            codeBody.appendChild(line);
-            
-            lineIndex++;
-            setTimeout(showNextLine, lineDelay);
+    let tokenIndex = 0;
+    let charIndex = 0;
+    let currentLineElement = null;
+    let currentTokenSpan = null;
+    let isTyping = false;
+
+    function createCursor() {
+        const cursor = document.createElement('span');
+        cursor.className = 'cursor';
+        return cursor;
+    }
+
+    let cursorElement = createCursor();
+
+    function updateCursorPosition() {
+        // Remove cursor from wherever it is
+        if (cursorElement.parentNode) {
+            cursorElement.parentNode.removeChild(cursorElement);
+        }
+
+        // Append to the end of the current line or the display
+        if (currentLineElement) {
+            currentLineElement.appendChild(cursorElement);
+        } else {
+            codeDisplay.appendChild(cursorElement);
         }
     }
-    
-    // Start animation after delay
-    setTimeout(showNextLine, 2000);
+
+    function typeNextChar() {
+        if (lineIndex >= codeData.length) {
+            // Finished typing
+            setTimeout(restartAnimation, 3000); // Wait 3s then restart
+            return;
+        }
+
+        // Initialize line if needed
+        if (!currentLineElement) {
+            currentLineElement = document.createElement('div');
+            codeDisplay.appendChild(currentLineElement);
+            updateCursorPosition();
+
+            // Handle empty lines
+            if (codeData[lineIndex].length === 0) {
+                lineIndex++;
+                currentTokenSpan = null;
+                currentLineElement = null; // Reset for next line
+                setTimeout(typeNextChar, 100); // Slight delay for new line
+                return;
+            }
+        }
+
+        const currentLineData = codeData[lineIndex];
+        const currentTokenData = currentLineData[tokenIndex];
+
+        // Initialize token span if needed
+        if (!currentTokenSpan) {
+            currentTokenSpan = document.createElement('span');
+            if (currentTokenData.class) {
+                currentTokenSpan.className = currentTokenData.class;
+            }
+            // Insert before cursor
+            if (cursorElement.parentNode === currentLineElement) {
+                currentLineElement.insertBefore(currentTokenSpan, cursorElement);
+            } else {
+                currentLineElement.appendChild(currentTokenSpan);
+                updateCursorPosition();
+            }
+        }
+
+        // Type character
+        if (charIndex < currentTokenData.text.length) {
+            currentTokenSpan.textContent += currentTokenData.text[charIndex];
+            charIndex++;
+            setTimeout(typeNextChar, 30 + Math.random() * 40); // Random typing speed (30-70ms)
+        } else {
+            // Move to next token
+            charIndex = 0;
+            tokenIndex++;
+            currentTokenSpan = null;
+
+            if (tokenIndex >= currentLineData.length) {
+                // Move to next line
+                tokenIndex = 0;
+                lineIndex++;
+                currentLineElement = null;
+                setTimeout(typeNextChar, 150); // Delay between lines
+            } else {
+                typeNextChar();
+            }
+        }
+    }
+
+    function restartAnimation() {
+        // Clear content
+        codeDisplay.innerHTML = '';
+        lineIndex = 0;
+        tokenIndex = 0;
+        charIndex = 0;
+        currentLineElement = null;
+        currentTokenSpan = null;
+
+        // Add cursor back
+        codeDisplay.appendChild(cursorElement);
+
+        // Start typing
+        setTimeout(typeNextChar, 500);
+    }
+
+    // Start initial animation
+    setTimeout(restartAnimation, 1000);
 }
 
-// Uncomment to enable code animation
-// window.addEventListener('load', animateCodeWindow);
+// Initialize code animation
+window.addEventListener('load', initHeroCodeAnimation);
+
+// ========================================
+// NAME TYPING ANIMATION
+// Animates the user name "Prasad Swain"
+// ========================================
+
+/**
+ * Animate name typing with specific styling
+ * types "Prasad " then "Swain" with gradient class
+ */
+function initNameAnimation() {
+    const nameDisplay = document.getElementById('hero-name-display');
+    if (!nameDisplay) return;
+
+    const nameData = [
+        { text: "Prasad ", class: "" },
+        { text: "Swain", class: "gradient-text" }
+    ];
+
+    let tokenIndex = 0;
+    let charIndex = 0;
+    let currentTokenSpan = null;
+    let isDeleting = false;
+
+    // Create a specific cursor for the H1
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    // Adjust cursor size for H1
+    cursor.style.height = '1em';
+    cursor.style.width = '0.1em';
+
+    function updateCursor() {
+        if (cursor.parentNode) cursor.parentNode.removeChild(cursor);
+        nameDisplay.appendChild(cursor);
+    }
+
+    function type() {
+        if (tokenIndex < nameData.length) {
+            if (!currentTokenSpan) {
+                currentTokenSpan = document.createElement('span');
+                if (nameData[tokenIndex].class) {
+                    currentTokenSpan.className = nameData[tokenIndex].class;
+                }
+                nameDisplay.appendChild(currentTokenSpan);
+                updateCursor();
+            }
+
+            const currentText = nameData[tokenIndex].text;
+
+            if (!isDeleting) {
+                // Typing
+                if (charIndex < currentText.length) {
+                    currentTokenSpan.textContent += currentText[charIndex];
+                    charIndex++;
+                    setTimeout(type, 100);
+                } else {
+                    // Finished this token
+                    tokenIndex++;
+                    charIndex = 0;
+                    currentTokenSpan = null;
+                    setTimeout(type, 100);
+                }
+            }
+        } else {
+            // Finished entire name
+            if (!isDeleting) {
+                // Wait before deleting
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else {
+                // Deleting logic (Backspacing entire name)
+                const spans = nameDisplay.querySelectorAll('span:not(.cursor)');
+                if (spans.length > 0) {
+                    const lastSpan = spans[spans.length - 1];
+                    const text = lastSpan.textContent;
+                    if (text.length > 0) {
+                        lastSpan.textContent = text.substring(0, text.length - 1);
+                        setTimeout(type, 50);
+                    } else {
+                        // Span empty, remove it
+                        nameDisplay.removeChild(lastSpan);
+                        updateCursor();
+                        // If all spans gone, reset
+                        if (nameDisplay.querySelectorAll('span:not(.cursor)').length === 0) {
+                            tokenIndex = 0;
+                            charIndex = 0;
+                            isDeleting = false;
+                            currentTokenSpan = null;
+                            setTimeout(type, 500);
+                        } else {
+                            setTimeout(type, 50);
+                        }
+                    }
+                } else {
+                    // Safety reset
+                    tokenIndex = 0;
+                    charIndex = 0;
+                    isDeleting = false;
+                    setTimeout(type, 500);
+                }
+            }
+        }
+    }
+
+    // Start
+    nameDisplay.appendChild(cursor);
+    setTimeout(type, 500);
+}
+
+// Initialize name animation
+window.addEventListener('load', initNameAnimation);
 
 // ========================================
 // SCROLL PROGRESS INDICATOR
@@ -385,12 +646,12 @@ function animateCodeWindow() {
  */
 function updateScrollProgress() {
     const progressBar = document.getElementById('scrollProgress');
-    
+
     if (!progressBar) return;
-    
+
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (window.scrollY / windowHeight) * 100;
-    
+
     progressBar.style.width = `${scrolled}%`;
 }
 
@@ -410,21 +671,21 @@ function validateContactForm(e) {
     const form = e.target;
     const email = form.querySelector('input[type="email"]');
     const message = form.querySelector('textarea');
-    
+
     let isValid = true;
-    
+
     // Email validation
     if (email && !validateEmail(email.value)) {
         showError(email, 'Please enter a valid email address');
         isValid = false;
     }
-    
+
     // Message validation
     if (message && message.value.trim().length < 10) {
         showError(message, 'Message must be at least 10 characters');
         isValid = false;
     }
-    
+
     if (!isValid) {
         e.preventDefault();
     }
@@ -447,13 +708,13 @@ function validateEmail(email) {
  */
 function showError(field, message) {
     field.classList.add('error');
-    
+
     // Remove existing error message
     const existingError = field.parentElement.querySelector('.error-message');
     if (existingError) {
         existingError.remove();
     }
-    
+
     // Create and append error message
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-message';
@@ -478,7 +739,7 @@ if (contactForm) {
  */
 function lazyLoadImages() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -489,7 +750,7 @@ function lazyLoadImages() {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
 }
 
@@ -506,9 +767,9 @@ document.addEventListener('DOMContentLoaded', lazyLoadImages);
  */
 function handleBackToTopButton() {
     const backToTopBtn = document.getElementById('backToTop');
-    
+
     if (!backToTopBtn) return;
-    
+
     if (window.scrollY > 500) {
         backToTopBtn.classList.add('visible');
     } else {
@@ -546,7 +807,7 @@ function toggleTheme() {
     const body = document.body;
     const currentTheme = body.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
+
     body.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
 }
@@ -582,7 +843,7 @@ function handleKeyboardShortcuts(e) {
     if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         toggleMobileMenu();
     }
-    
+
     // Ctrl/Cmd + K - Focus search (if exists)
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
@@ -606,7 +867,7 @@ function logPerformanceMetrics() {
     if ('performance' in window) {
         window.addEventListener('load', () => {
             const perfData = performance.getEntriesByType('navigation')[0];
-            
+
             console.log('Performance Metrics:');
             console.log(`DOM Content Loaded: ${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`);
             console.log(`Page Load Time: ${perfData.loadEventEnd - perfData.loadEventStart}ms`);
@@ -628,13 +889,13 @@ function logPerformanceMetrics() {
  */
 function initializeWebsite() {
     console.log('✅ Website initialized successfully');
-    
+
     // Set initial navbar state
     handleNavbarScroll();
-    
+
     // Set initial active nav link
     updateActiveNavLink();
-    
+
     // Add loaded class to body for CSS transitions
     document.body.classList.add('loaded');
 }
